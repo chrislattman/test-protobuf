@@ -20,7 +20,7 @@ int main() {
     std::cout << contact.DebugString() << std::endl;
     std::string data;
     contact.SerializeToString(&data);
-    // TODO: check that data equals some byte string
+    std::cout << std::boolalpha << (data.length() == 59) << std::endl;
     contacts::Contact recovered;
     if (!recovered.ParseFromString(data)) {
         std::abort();

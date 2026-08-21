@@ -24,7 +24,7 @@ public class TestProtobuf {
 
         System.out.println(contact);
         byte[] data = contact.toByteArray();
-        // TODO: check that data equals some byte string
+        System.out.println(data.length == 59);
         Contact recovered = Contact.parseFrom(data);
         System.out.println(recovered);
     }

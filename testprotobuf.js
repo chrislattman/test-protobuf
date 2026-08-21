@@ -23,7 +23,7 @@ async function main() {
 
     console.log(contact);
     const data = Contact.encode(contact).finish(); // serializes to Uint8Array
-    // TODO: check that data equals some byte string
+    console.log(data.length === 59);
     const recovered = Contact.decode(data);
     console.log(recovered);
 }

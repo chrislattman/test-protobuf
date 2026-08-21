@@ -30,7 +30,7 @@ func main() {
 
 	fmt.Println(contact)
 	data, _ := proto.Marshal(contact) // marshals to []byte
-	// TODO: check that data equals some byte string
+	fmt.Println(len(data) == 59)
 	recovered := &contacts.Contact{}
 	err := proto.Unmarshal(data, recovered)
 	if err != nil {

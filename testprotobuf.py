@@ -21,7 +21,7 @@ contact.phone_numbers.append(
 
 print(contact)
 data = contact.SerializeToString() # serializes to bytes object
-# TODO: check that data equals some byte string
+print(len(data) == 59)
 recovered = Contact()
 recovered.ParseFromString(data)
 print(recovered)

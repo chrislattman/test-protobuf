@@ -24,7 +24,7 @@ fn main() {
 
     println!("{contact:?}");
     let data = contact.encode_to_vec(); // serialized to Vec<u8>
-    // TODO: check that data equals some byte string
+    println!("{}", data.len() == 59);
     let recovered = Contact::decode(data.as_slice()).unwrap();
     println!("{recovered:?}");
 }
