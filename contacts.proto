@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package contacts;
+
+option go_package = "example.com/test-protobuf/go/contacts";
+option java_multiple_files = true;
+
+message PhoneNumber {
+    string phone_type = 1;
+    string number = 2;
+}
+
+message Contact {
+    int32 index = 1;
+    string first_name = 2;
+    string last_name = 3;
+    repeated PhoneNumber phone_numbers = 4;
+}

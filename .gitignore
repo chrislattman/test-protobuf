@@ -1,0 +1,12 @@
+contacts/
+lib/
+*_pb2.*
+*.pb.*
+build/
+__pycache__/
+testprotobuf
+node_modules/
+
+# Added by cargo
+
+/target

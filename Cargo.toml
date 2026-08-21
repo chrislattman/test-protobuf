@@ -1,0 +1,14 @@
+[package]
+name = "test-protobuf"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "testprotobuf"
+path = "src/testprotobuf.rs"
+
+[dependencies]
+prost = "0.14.4"
+
+[build-dependencies]
+prost-build = "0.14"
