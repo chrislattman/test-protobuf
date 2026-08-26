@@ -1,4 +1,9 @@
 {
+  "name": "test-protobuf",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "protobufjs": "^8.7.2"
   }

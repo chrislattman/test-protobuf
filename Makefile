@@ -25,6 +25,6 @@ rust:
 	cargo run -q
 
 clean:
-	cmake --build build --target clean && cargo clean && rm -rf contacts *_pb2.* *.pb.* go/contacts
+	cmake --build build --target clean && cargo clean
 
 .PHONY: java python nodejs go cpp rust clean
