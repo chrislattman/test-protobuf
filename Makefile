@@ -9,7 +9,8 @@ python:
 	python3 testprotobuf.py
 
 nodejs:
-	node testprotobuf.js
+	npm run build:proto
+	npx tsx testprotobuf.ts
 
 go:
 	mkdir -p go/contacts

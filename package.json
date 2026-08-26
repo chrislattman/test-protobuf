@@ -1,10 +1,21 @@
 {
   "name": "test-protobuf",
   "version": "0.1.0",
+  "type": "module",
   "engines": {
     "node": ">=20"
   },
+  "scripts": {
+    "build:proto": "pbjs -t static-module -w commonjs -o contacts.js contacts.proto && pbts -o contacts.d.ts contacts.js && cp contacts.js contacts.cjs && node -e 'const fs = require(\"fs\"); const dts = fs.readFileSync(\"contacts.d.ts\", \"utf8\"); fs.writeFileSync(\"contacts.d.cts\", dts + \"\\nexport interface IRoot {\\n    contacts: typeof contacts;\\n}\\ndeclare const $root: IRoot;\\nexport default $root;\\n\");'",
+    "start": "tsx testprotobuf.ts"
+  },
   "dependencies": {
-    "protobufjs": "^8.7.2"
+    "protobufjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "protobufjs-cli": "^1.1.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
   }
 }
