@@ -19,7 +19,7 @@ function main(): void {
     });
 
     console.log(contact);
-    const data: Uint8Array = contacts.Contact.encode(contact).finish();
+    const data = contacts.Contact.encode(contact).finish(); // serializes to Uint8Array
     console.log(data.length === 59);
     const recovered = contacts.Contact.decode(data);
     console.log(recovered);
