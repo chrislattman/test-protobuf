@@ -1,7 +1,7 @@
-const protobuf = require("protobufjs");
+import { load } from "protobufjs";
 
 async function main() {
-    const root = await protobuf.load("contacts.proto");
+    const root = await load("contacts.proto");
     const Contact = root.lookupType("contacts.Contact");
     const PhoneNumber = root.lookupType("contacts.PhoneNumber");
 
