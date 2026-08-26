@@ -1,5 +1,7 @@
 lib/
 build/
+.gradle/
+bin/
 __pycache__/
 testprotobuf
 node_modules/

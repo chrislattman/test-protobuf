@@ -1,8 +1,8 @@
 # You can combine protoc invocations into one: protoc --python_out=. --go_out=go/contacts ...
 
 java:
-	protoc --java_out=. contacts.proto
-	java -cp .:lib/*:contacts TestProtobuf.java
+	protoc --java_out=src/main/java contacts.proto
+	./gradlew run -q
 
 python:
 	protoc --pyi_out=. --python_out=. contacts.proto
@@ -26,6 +26,7 @@ rust:
 	cargo run -q
 
 clean:
-	cmake --build build --target clean && cargo clean
+	cmake --build build --target clean && cargo clean # && ./gradlew clean # Commenting out because CMake and Gradle both use the build folder
+	rm -rf classes generated reports tmp
 
 .PHONY: java python nodejs go cpp rust clean
