@@ -9,22 +9,22 @@ import (
 
 func main() {
 	contact := &contacts.Contact{
-		Index: 1,
+		Index:     1,
 		FirstName: "John",
-		LastName: "Smith",
+		LastName:  "Smith",
 	}
 	contact.PhoneNumbers = append(
-		contact.PhoneNumbers, 
+		contact.PhoneNumbers,
 		&contacts.PhoneNumber{
 			PhoneType: "home",
-			Number: "123-456-7890",
+			Number:    "123-456-7890",
 		},
 	)
 	contact.PhoneNumbers = append(
 		contact.PhoneNumbers,
 		&contacts.PhoneNumber{
 			PhoneType: "work",
-			Number: "012-345-6789",
+			Number:    "012-345-6789",
 		},
 	)
 

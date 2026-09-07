@@ -9,7 +9,7 @@ public class TestProtobuf {
         builder.setIndex(1);
         builder.setFirstName("John");
         builder.setLastName("Smith");
-        
+
         builder.addPhoneNumbers(
             PhoneNumber.newBuilder()
                 .setPhoneType("home")
